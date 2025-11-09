@@ -14,299 +14,301 @@
         <span onclick="scrollToID('onecomplement')">Einerkomplement</span>
         <span onclick="scrollToID('twocomplement')">Zweierkomplement</span>
     </nav>
-    <div class="content-container">
-        <div class="content" id="binarysystem">
-            <span class="content-heading">Binärsystem</span>
-            <p>
-                Das Binärsystem, auch Dualsystem genannt, ist ein Stellenwertsystem zur Basiszahl 2. <br>
-                Es werden nur die Ziffern 0 und 1 genutzt. Die Ziffern werden von rechts nach links mit der 0 beginnend durchnummeriert. <br>
-                Der Wert der Ziffer im Dezimalsystem ergibt sich aus dem Produkt der Ziffer mit der Potenz der Basiszahl 2 <br>
-                und der Nummer der Ziffer als Hochzahl: 
-            </p>
-            <span class="content-heading-thi">Beispiel</span>
-            <span>Binärzahl: 11010011</span>
-            <table>
-                <tr><th>Binär</th><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td>
-                </tr>
-                <tr><th>Wert des Bits</th><td>2<sup>7</sup></td><td>2<sup>6</sup></td><td>2<sup>5</sup></td><td>2<sup>4</sup></td><td>2<sup>3</sup></td><td>2<sup>2</sup></td><td>2<sup>1</sup></td><td>2<sup>0</sup></td>
-                </tr>
-                <tr><th>Wert im Dezimalsystem</th><td>1&sdot;2<sup>7</sup>=128</td><td>1&sdot;2<sup>6</sup>=64</td><td>0&sdot;2<sup>5</sup>=0</td><td>0&sdot;2<sup>4</sup>=0</td><td>1&sdot;2<sup>3</sup>=16</td><td>0&sdot;2<sup>2</sup>=0</td><td>1&sdot;2<sup>1</sup>=2</td><td>1&sdot;2<sup>0</sup>=1</td>
-                </tr>
-            </table>
-            <span>Dezimalzahl: 128 + 64 + 16 + 2 + 1 = 211</span>
-            <span class="content-heading-sec">Binär-Dezimal-Konverter</span>
-            <div class="converter-container">
-                <span class="content-heading-thi row-1 column-1 margin-top-0" id="binary-converter-label-binary">Binär</span>
-                <span class="content-heading-thi row-1 column-3 margin-top-0" id="binary-converter-label-decimal">Dezimal</span>
-                <input class="input" id="binary-converter-binary"></input>
-                <div class="converter-menu-container">
-                    <button class="swap-button" onclick="binaryConverterSwap()">tauschen</button>
-                    <button class="convert-button" onclick="binaryConverterConvert()">konvertieren</button>
+    <div class="center">
+        <div class="content-container">
+            <div class="content" id="binarysystem">
+                <span class="content-heading">Binärsystem</span>
+                <p>
+                    Das Binärsystem, auch Dualsystem genannt, ist ein Stellenwertsystem zur Basiszahl 2. <br>
+                    Es werden nur die Ziffern 0 und 1 genutzt. Die Ziffern werden von rechts nach links mit der 0 beginnend durchnummeriert. <br>
+                    Der Wert der Ziffer im Dezimalsystem ergibt sich aus dem Produkt der Ziffer mit der Potenz der Basiszahl 2 <br>
+                    und der Nummer der Ziffer als Exponent: 
+                </p>
+                <span class="content-heading-thi">Beispiel</span>
+                <span>Binärzahl: 11010011</span>
+                <table>
+                    <tr><th>Binär</th><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td>
+                    </tr>
+                    <tr><th>Wert des Bits</th><td>2<sup>7</sup></td><td>2<sup>6</sup></td><td>2<sup>5</sup></td><td>2<sup>4</sup></td><td>2<sup>3</sup></td><td>2<sup>2</sup></td><td>2<sup>1</sup></td><td>2<sup>0</sup></td>
+                    </tr>
+                    <tr><th>Wert im Dezimalsystem</th><td>1&sdot;2<sup>7</sup>=128</td><td>1&sdot;2<sup>6</sup>=64</td><td>0&sdot;2<sup>5</sup>=0</td><td>0&sdot;2<sup>4</sup>=0</td><td>1&sdot;2<sup>3</sup>=16</td><td>0&sdot;2<sup>2</sup>=0</td><td>1&sdot;2<sup>1</sup>=2</td><td>1&sdot;2<sup>0</sup>=1</td>
+                    </tr>
+                </table>
+                <span>Dezimalzahl: 128 + 64 + 16 + 2 + 1 = 211</span>
+                <span class="content-heading-sec">Binär-Dezimal-Konverter</span>
+                <div class="converter-container">
+                    <span class="content-heading-thi row-1 column-1 margin-top-0" id="binary-converter-label-binary">Binär</span>
+                    <span class="content-heading-thi row-1 column-3 margin-top-0" id="binary-converter-label-decimal">Dezimal</span>
+                    <input class="input" id="binary-converter-binary"></input>
+                    <div class="converter-menu-container">
+                        <button class="swap-button" onclick="binaryConverterSwap()">tauschen</button>
+                        <button class="convert-button" onclick="binaryConverterConvert()">konvertieren</button>
+                    </div>
+                    <input class="output" disabled id="binary-converter-decimal"></input>
                 </div>
-                <input class="output" disabled id="binary-converter-decimal"></input>
-            </div>
-            <span class="content-heading-sec">Binärzahl-Konfigurator</span>
-            <div class="binary-button-container">
-                <button class="binary-button" id="bin-button-0" onclick="binaryButtonToggle(0)">0</button>
-                <button class="binary-button" id="bin-button-1" onclick="binaryButtonToggle(1)">0</button>
-                <button class="binary-button" id="bin-button-2" onclick="binaryButtonToggle(2)">0</button>
-                <button class="binary-button" id="bin-button-3" onclick="binaryButtonToggle(3)">0</button>
-                <button class="binary-button" id="bin-button-4" onclick="binaryButtonToggle(4)">0</button>
-                <button class="binary-button" id="bin-button-5" onclick="binaryButtonToggle(5)">0</button>
-                <button class="binary-button" id="bin-button-6" onclick="binaryButtonToggle(6)">0</button>
-                <button class="binary-button" id="bin-button-7" onclick="binaryButtonToggle(7)">0</button>
-            </div>
-            <span class="binary-result" id="binary-result">0</span>
-        </div>
-        <div class="content" id="hexadecimalsystem">
-            <span class="content-heading">Hexadezimalsystem</span>
-            <p>
-                Das Hexadezimalsystem, auch Sechzehnersystem genannt, ist ein Stellenwertsystem zur Basiszahl 16. <br>
-                Da es nur einstellige Zahlen von 0-9 gibt, werden zusätzlich die Buchstaben A-F <br>
-                als „Nichtstandardziffern“ nach dem folgenden System verwendet:
-            </p>
-            <table>
-                <tr>
-                    <th>Ziffer</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td>
-                </tr>
-                <tr><th>Wert</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
-                </tr>
-            </table>
-            <p>
-                Die Ziffern werden hintereinandergeschrieben. Dabei ist jede Ziffer ihr Wert <br>
-                multipliziert mit der 16er-Potenz mit der Hochzahl der Nummer Ziffer, begonnen von rechts mit 0:
-            </p>
-            <span class="content-heading-thi">Beispiel</span>
-            <span>Hexadezimal: 94A7</span>
-            <table>
-                <tr>
-                    <th>Wert der Ziffer</th><td>16<sup>3</sup> = 4096</td><td>16<sup>2</sup> = 256</td><td>16<sup>1</sup> = 16</td><td>16<sup>0</sup> = 1</td>
-                </tr>
-                <tr>
-                    <th>Ziffer</th><td>9</td><td>4</td><td>A</td><td>7</td>
-                </tr>
-                <tr>
-                    <th>Wert im Dezimalsystem</th><td>9 &sdot; 4096 = 36864</td><td>4 &sdot; 256 = 1024</td><td>10 &sdot; 16 = 160</td><td>7 &sdot; 1 = 7</td>
-                </tr>
-            </table>
-            <span>Dezimalzahl: 36864 + 1024 + 160 + 7 = 38055</span>
-            <span class="content-heading-sec">Hexadezimal-Dezimal-Konverter</span>
-            <div class="converter-container">
-                <span class="content-heading-thi row-1 column-1 margin-top-0" id="hex-converter-label-hex">Hexadezimal</span>
-                <span class="content-heading-thi row-1 column-3 margin-top-0" id="hex-converter-label-decimal">Dezimal</span>
-                <input class="input" id="hex-converter-hex"></input>
-                <div class="converter-menu-container">
-                    <button class="swap-button" onclick="hexConverterSwap()">tauschen</button>
-                    <button class="convert-button" onclick="hexConverterConvert()">konvertieren</button>
+                <span class="content-heading-sec">Binärzahl-Konfigurator</span>
+                <div class="binary-button-container">
+                    <button class="binary-button" id="bin-button-0" onclick="binaryButtonToggle(0)">0</button>
+                    <button class="binary-button" id="bin-button-1" onclick="binaryButtonToggle(1)">0</button>
+                    <button class="binary-button" id="bin-button-2" onclick="binaryButtonToggle(2)">0</button>
+                    <button class="binary-button" id="bin-button-3" onclick="binaryButtonToggle(3)">0</button>
+                    <button class="binary-button" id="bin-button-4" onclick="binaryButtonToggle(4)">0</button>
+                    <button class="binary-button" id="bin-button-5" onclick="binaryButtonToggle(5)">0</button>
+                    <button class="binary-button" id="bin-button-6" onclick="binaryButtonToggle(6)">0</button>
+                    <button class="binary-button" id="bin-button-7" onclick="binaryButtonToggle(7)">0</button>
                 </div>
-                <input class="output" disabled id="hex-converter-decimal"></input>
+                <span class="binary-result" id="binary-result">0</span>
             </div>
-            <span class="content-heading-sec">Hexadezimalzahl-Konfigurator</span>
-            <div class="hex-button-container">
-                <button class="hex-button" id="hex-button-0" onclick="hexButtonToggle(0, event)">0</button>
-                <button class="hex-button" id="hex-button-1" onclick="hexButtonToggle(1, event)">0</button>
-                <button class="hex-button" id="hex-button-2" onclick="hexButtonToggle(2, event)">0</button>
-                <button class="hex-button" id="hex-button-3" onclick="hexButtonToggle(3, event)">0</button>
-                <button class="hex-button" id="hex-button-4" onclick="hexButtonToggle(4, event)">0</button>
-                <button class="hex-button" id="hex-button-5" onclick="hexButtonToggle(5, event)">0</button>
-                <button class="hex-button" id="hex-button-6" onclick="hexButtonToggle(6, event)">0</button>
-                <button class="hex-button" id="hex-button-7" onclick="hexButtonToggle(7, event)">0</button>
+            <div class="content" id="hexadecimalsystem">
+                <span class="content-heading">Hexadezimalsystem</span>
+                <p>
+                    Das Hexadezimalsystem, auch Sechzehnersystem genannt, ist ein Stellenwertsystem zur Basiszahl 16. <br>
+                    Da es nur einstellige Zahlen von 0-9 gibt, werden zusätzlich die Buchstaben A-F <br>
+                    als „Nichtstandardziffern“ nach dem folgenden System verwendet:
+                </p>
+                <table>
+                    <tr>
+                        <th>Ziffer</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td>
+                    </tr>
+                    <tr><th>Wert</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+                    </tr>
+                </table>
+                <p>
+                    Die Ziffern werden hintereinandergeschrieben. Dabei ist jede Ziffer ihr Wert <br>
+                    multipliziert mit der 16er-Potenz mit der Hochzahl der Nummer Ziffer, begonnen von rechts mit 0:
+                </p>
+                <span class="content-heading-thi">Beispiel</span>
+                <span>Hexadezimal: 94A7</span>
+                <table>
+                    <tr>
+                        <th>Wert der Ziffer</th><td>16<sup>3</sup> = 4096</td><td>16<sup>2</sup> = 256</td><td>16<sup>1</sup> = 16</td><td>16<sup>0</sup> = 1</td>
+                    </tr>
+                    <tr>
+                        <th>Ziffer</th><td>9</td><td>4</td><td>A</td><td>7</td>
+                    </tr>
+                    <tr>
+                        <th>Wert im Dezimalsystem</th><td>9 &sdot; 4096 = 36864</td><td>4 &sdot; 256 = 1024</td><td>10 &sdot; 16 = 160</td><td>7 &sdot; 1 = 7</td>
+                    </tr>
+                </table>
+                <span>Dezimalzahl: 36864 + 1024 + 160 + 7 = 38055</span>
+                <span class="content-heading-sec">Hexadezimal-Dezimal-Konverter</span>
+                <div class="converter-container">
+                    <span class="content-heading-thi row-1 column-1 margin-top-0" id="hex-converter-label-hex">Hexadezimal</span>
+                    <span class="content-heading-thi row-1 column-3 margin-top-0" id="hex-converter-label-decimal">Dezimal</span>
+                    <input class="input" id="hex-converter-hex"></input>
+                    <div class="converter-menu-container">
+                        <button class="swap-button" onclick="hexConverterSwap()">tauschen</button>
+                        <button class="convert-button" onclick="hexConverterConvert()">konvertieren</button>
+                    </div>
+                    <input class="output" disabled id="hex-converter-decimal"></input>
+                </div>
+                <span class="content-heading-sec">Hexadezimalzahl-Konfigurator</span>
+                <div class="hex-button-container">
+                    <button class="hex-button" id="hex-button-0" onclick="hexButtonToggle(0, event)">0</button>
+                    <button class="hex-button" id="hex-button-1" onclick="hexButtonToggle(1, event)">0</button>
+                    <button class="hex-button" id="hex-button-2" onclick="hexButtonToggle(2, event)">0</button>
+                    <button class="hex-button" id="hex-button-3" onclick="hexButtonToggle(3, event)">0</button>
+                    <button class="hex-button" id="hex-button-4" onclick="hexButtonToggle(4, event)">0</button>
+                    <button class="hex-button" id="hex-button-5" onclick="hexButtonToggle(5, event)">0</button>
+                    <button class="hex-button" id="hex-button-6" onclick="hexButtonToggle(6, event)">0</button>
+                    <button class="hex-button" id="hex-button-7" onclick="hexButtonToggle(7, event)">0</button>
+                </div>
+                <span class="hex-result" id="hex-result">0</span>
+                <span class="content-heading-sec">Zusammenhang zwischen Binär- und Hexadezimalsystem</span>
+                <p>
+                    Um einen Zusammenhang zum Binärsystem herzustellen, müssen zunächst die Bitmuster <br>
+                    der einzelnen Hexadezimalzahlen im Binärsystem betrachtet werden:
+                </p>
+                <table>
+                    <tr class="no-default-row-highlighting">
+                        <th>Ziffer</th><th>8</th><th>4</th><th>2</th><th>1</th>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>2</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>3</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>4</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>5</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>6</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>7</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>8</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>9</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>A</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>B</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>C</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>D</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>E</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td>F</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td>
+                    </tr>
+                </table>
+                <span>Die folgende Tabelle vergleicht die beiden Darstellungen anhand von drei Beispielen:</span>
+                <table>
+                    <tr class="no-default-row-highlighting">
+                        <th>128</th><th>64</th><th>32</th><th class="table-big-border-right">16</th><th>8</th><th>4</th><th>2</th><th class="table-big-border-right">1</th><th class="table-big-border-right">Hex</th><th>Hex</th>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted table-big-border-right">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted table-big-border-right">1</td><td class="table-big-border-right">5</td><td>D</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted table-big-border-right">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted table-big-border-right">1</td><td class="table-big-border-right">F</td><td>7</td>
+                    </tr>
+                    <tr class="no-default-row-highlighting">
+                        <td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted table-big-border-right">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted table-big-border-right">0</td><td class="table-big-border-right">2</td><td>4</td>
+                    </tr>
+                </table>
+                <p>
+                    Die ersten vier Bits der Binärzahl entsprechen der ersten Ziffer der Hexadezimalzahl und <br>
+                    die letzten vier Bits der letzten Hexadezimalzahl. <br>
+                    01011101<sub>2</sub><br>
+                    = 0 &sdot; 128 + 1 &sdot; 64 + 0 &sdot; 32 + 1 &sdot; 16 + 1 &sdot; 8 + 1 &sdot; 4 + 2 &sdot; 0 + 1 &sdot; 1 <br>
+                    = (0 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 16 + (1 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 1 <br>
+                    = 5 &sdot; 16 + 13 &sdot; 1 <br>
+                    = 5D<sub>16</sub> <br>
+                    Man kann also immer vier Bits einer Binärzahl durch eine Hexadezimalzahl ersetzen, <br>
+                    um Binärzahlen, gekürzt als Hexadezimalzahlen, darstellen zu können.
+                </p>
+                <span class="content-heading-sec">Farben und das Hexadezimalsystem</span>
+                <p>
+                    Das Bildschirme Farben mit Rot, Grün und Blau darstellen, sollte ja bekannt sein. <br>
+                    Meist werden hierfür 8 Bit, also 1 Byte pro Farbe benutzt. Das heißt, dass man z.B. <br>
+                    der Farbe Rot einen beliebigen Wert zwischen 0 und 255 zuweisen kann oder eben eine <br>
+                    beliebige Hexadezimalzahl zwischen 00 und FF. <br>
+                    Dies kann man z.B. in der RGB-Farbdarstellung darstellen: rgb(255,0,0) für Rot. <br>
+                    Daraus folgt der bekannte Hex-Farbcode zur Farbdarstellung. <br>
+                    Sie beginnt mit einem Hashtag(#), gefolgt von zwei Hexadezimalen für Rot, zwei für Grün und zwei für Blau. 
+                </p>
+                <span class="content-heading-thi">Beispiele</span>
+                <table>
+                    <tr>
+                        <th>Farbe</th>
+                        <th>RGB</th>
+                        <th>Hex</th>
+                        <th>Vorschau</th>
+                    </tr>
+                    <tr>
+                        <td>Rot</td>
+                        <td>rgb(255, 0, 0)</td>
+                        <td>#FF0000</td>
+                        <td style="background-color:#FF0000"></td>
+                    </tr>
+                    <tr>
+                        <td>Grün</td>
+                        <td>rgb(0, 255, 0)</td>
+                        <td>#00FF00</td>
+                        <td style="background-color:#00FF00"></td>
+                    </tr>
+                    <tr>
+                        <td>Blau</td>
+                        <td>rgb(0, 0, 255)</td>
+                        <td>#0000FF</td>
+                        <td style="background-color:#0000FF"></td>
+                    </tr>
+                    <tr>
+                        <td>Gelb</td>
+                        <td>rgb(255, 255, 0)</td>
+                        <td>#FFFF00</td>
+                        <td style="background-color:#FFFF00"></td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>rgb(255, 165, 0)</td>
+                        <td>#FFA500</td>
+                        <td style="background-color:#FFA500"></td>
+                    </tr>
+                    <tr>
+                        <td>Cyan</td>
+                        <td>rgb(0, 255, 255)</td>
+                        <td>#00FFFF</td>
+                        <td style="background-color:#00FFFF"></td>
+                    </tr>
+                    <tr>
+                        <td>Lila</td>
+                        <td>rgb(128, 0, 128)</td>
+                        <td>#800080</td>
+                        <td style="background-color:#800080"></td>
+                    </tr>
+                </table>
+                <span class="content-heading-sec">Farbentester</span>
+                <div class="hex-color-container">
+                    <input class="hex-color-input" type="text" id="hex-color-input" value="#0096ff">
+                    <div class="hex-color-preview" id="hex-color-output"></div>
+                </div>
             </div>
-            <span class="hex-result" id="hex-result">0</span>
-            <span class="content-heading-sec">Zusammenhang zwischen Binär- und Hexadezimalsystem</span>
-            <p>
-                Um einen Zusammenhang zum Binärsystem herzustellen, müssen zunächst die Bitmuster <br>
-                der einzelnen Hexadezimalzahlen im Binärsystem betrachtet werden:
-            </p>
-            <table>
-                <tr class="no-default-row-highlighting">
-                    <th>Ziffer</th><th>8</th><th>4</th><th>2</th><th>1</th>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>2</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>3</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>4</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>5</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>6</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>7</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>8</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>9</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>A</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>B</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>C</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>D</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>E</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td>F</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td>
-                </tr>
-            </table>
-            <span>Die folgende Tabelle vergleicht die beiden Darstellungen anhand von drei Beispielen:</span>
-            <table>
-                <tr class="no-default-row-highlighting">
-                    <th>128</th><th>64</th><th>32</th><th class="table-big-border-right">16</th><th>8</th><th>4</th><th>2</th><th class="table-big-border-right">1</th><th class="table-big-border-right">Hex</th><th>Hex</th>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted table-big-border-right">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="highlighted table-big-border-right">1</td><td class="table-big-border-right">5</td><td>D</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted table-big-border-right">1</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="highlighted">1</td><td class="highlighted table-big-border-right">1</td><td class="table-big-border-right">F</td><td>7</td>
-                </tr>
-                <tr class="no-default-row-highlighting">
-                    <td class="not-highlighted">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted table-big-border-right">0</td><td class="not-highlighted">0</td><td class="highlighted">1</td><td class="not-highlighted">0</td><td class="not-highlighted table-big-border-right">0</td><td class="table-big-border-right">2</td><td>4</td>
-                </tr>
-            </table>
-            <p>
-                Die ersten vier Bits der Binärzahl entsprechen der ersten Ziffer der Hexadezimalzahl und <br>
-                die letzten vier Bits der letzten Hexadezimalzahl. <br>
-                01011101<sub>2</sub><br>
-                = 0 &sdot; 128 + 1 &sdot; 64 + 0 &sdot; 32 + 1 &sdot; 16 + 1 &sdot; 8 + 1 &sdot; 4 + 2 &sdot; 0 + 1 &sdot; 1 <br>
-                = (0 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 16 + (1 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 1 <br>
-                = 5 &sdot; 16 + 13 &sdot; 1 <br>
-                = 5D<sub>16</sub> <br>
-                Man kann also immer vier Bits einer Binärzahl durch eine Hexadezimalzahl ersetzen, <br>
-                um Binärzahlen, gekürzt als Hexadezimalzahlen, darstellen zu können.
-            </p>
-            <span class="content-heading-sec">Farben und das Hexadezimalsystem</span>
-            <p>
-                Das Bildschirme Farben mit Rot, Grün und Blau darstellen, sollte ja bekannt sein. <br>
-                Meist werden hierfür 8 Bit, also 1 Byte pro Farbe benutzt. Das heißt, dass man z.B. <br>
-                der Farbe Rot einen beliebigen Wert zwischen 0 und 255 zuweisen kann oder eben eine <br>
-                beliebige Hexadezimalzahl zwischen 00 und FF. <br>
-                Dies kann man z.B. in der RGB-Farbdarstellung darstellen: rgb(255,0,0) für Rot. <br>
-                Daraus folgt der bekannte Hex-Farbcode zur Farbdarstellung. <br>
-                Sie beginnt mit einem Hashtag(#), gefolgt von zwei Hexadezimalen für Rot, zwei für Grün und zwei für Blau. 
-            </p>
-            <span class="content-heading-thi">Beispiele</span>
-            <table>
-                <tr>
-                    <th>Farbe</th>
-                    <th>RGB</th>
-                    <th>Hex</th>
-                    <th>Vorschau</th>
-                </tr>
-                <tr>
-                    <td>Rot</td>
-                    <td>rgb(255, 0, 0)</td>
-                    <td>#FF0000</td>
-                    <td style="background-color:#FF0000"></td>
-                </tr>
-                <tr>
-                    <td>Grün</td>
-                    <td>rgb(0, 255, 0)</td>
-                    <td>#00FF00</td>
-                    <td style="background-color:#00FF00"></td>
-                </tr>
-                <tr>
-                    <td>Blau</td>
-                    <td>rgb(0, 0, 255)</td>
-                    <td>#0000FF</td>
-                    <td style="background-color:#0000FF"></td>
-                </tr>
-                <tr>
-                    <td>Gelb</td>
-                    <td>rgb(255, 255, 0)</td>
-                    <td>#FFFF00</td>
-                    <td style="background-color:#FFFF00"></td>
-                </tr>
-                <tr>
-                    <td>Orange</td>
-                    <td>rgb(255, 165, 0)</td>
-                    <td>#FFA500</td>
-                    <td style="background-color:#FFA500"></td>
-                </tr>
-                <tr>
-                    <td>Cyan</td>
-                    <td>rgb(0, 255, 255)</td>
-                    <td>#00FFFF</td>
-                    <td style="background-color:#00FFFF"></td>
-                </tr>
-                <tr>
-                    <td>Lila</td>
-                    <td>rgb(128, 0, 128)</td>
-                    <td>#800080</td>
-                    <td style="background-color:#800080"></td>
-                </tr>
-            </table>
-            <span class="content-heading-sec">Farbentester</span>
-            <div class="hex-color-container">
-                <input class="hex-color-input" type="text" id="hex-color-input" value="#0096ff">
-                <div class="hex-color-preview" id="hex-color-output"></div>
+            <div class="content" id="onecomplement">
+                <span class="content-heading">Einerkomplement</span>
+                <p>
+                    Bisher können nur positive Zahlen mit dem Binärsystem dargestellt werden, um nun auch negative Zahlen <br>
+                    darstellen zu können, gibt es das Einerkomplement. Das erste Bit stellt nun keinen Teil der Zahl mehr dar, <br>
+                    sondern ist ein Indikator dafür, ob die Zahl positiv oder negativ ist. <br> Hierbei steht eine 0 für positiv und eine 1 für negativ. <br>
+                    Um eine negative Zahl im Einerkomplement darzustellen, wird zuerst der Betrag der Zahl als Binärzahl dargestellt. <br>
+                    Bei dieser Binärzahl werden nun alle einzelnen Bits invertiert, das heißt aus jeder 0 wird eine 1 und umgekehrt. <br>
+                    Das Invertieren sorgt dafür, dass Addition, sowie Subtraktion weiterhin funktionieren. <br>
+                </p>
+                <span class="content-heading-thi">Beispiele</span>
+                <span>-5 &rarr; |-5| = 5 = 0101<sub>2</sub> &rarr; 1010<sub>2</sub></span>
+                <span>-3 &rarr; |-3| = 3 = 0011<sub>2</sub> &rarr; 1100<sub>2</sub></span>
+                <span class="content-heading-sec">Probleme</span>
+                <p>
+                    Im Einerkomplement gibt es zwei Darstellungen für die 0: 0000 und 1111. <br>
+                    Das stellt zwar kein mathematisches Problem dar, da -0 = 0 ist, aber es ist ineffizient. <br>
+                    Ein größeres Problem ist, dass die Addition über die 0 hinweg nicht funktioniert: 
+                </p>
+                <img class="complement-img" src="./res/images/one_complement_problem_addition_over_zero.png" alt="">
+                <span class="content-heading-sec">Wertebereich</span>
+                <p>
+                    von: -2<sup>n-1</sup> + 1 <br>
+                    bis: 2<sup>n-1</sup> -1
+                </p>
             </div>
-        </div>
-        <div class="content" id="onecomplement">
-            <span class="content-heading">Einerkomplement</span>
-            <p>
-                Bisher können nur positive Zahlen mit dem Binärsystem dargestellt werden, um nun auch negative Zahlen <br>
-                darstellen zu können, gibt es das Einerkomplement. Das erste Bit stellt nun keinen Teil der Zahl mehr dar, <br>
-                sondern ist ein Indikator dafür, ob die Zahl positiv oder negativ ist. <br> Hierbei steht eine 0 für positiv und eine 1 für negativ. <br>
-                Um eine negative Zahl im Einerkomplement darzustellen, wird zuerst der Betrag der Zahl als Binärzahl dargestellt. <br>
-                Bei dieser Binärzahl werden nun alle einzelnen Bits invertiert, das heißt aus jeder 0 wird eine 1 und umgekehrt. <br>
-                Das Invertieren sorgt dafür, dass Addition, sowie Subtraktion weiterhin funktionieren. <br>
-            </p>
-            <span class="content-heading-thi">Beispiele</span>
-            <span>-5 &rarr; |-5| = 5 = 0101<sub>2</sub> &rarr; 1010<sub>2</sub></span>
-            <span>-3 &rarr; |-3| = 3 = 0011<sub>2</sub> &rarr; 1100<sub>2</sub></span>
-            <span class="content-heading-sec">Probleme</span>
-            <p>
-                Im Einerkomplement gibt es zwei Darstellungen für die 0: 0000 und 1111. <br>
-                Das stellt zwar kein mathematisches Problem dar, da -0 = 0 ist, aber es ist ineffizient. <br>
-                Ein größeres Problem ist, dass die Addition über die 0 hinweg nicht funktioniert: 
-            </p>
-            <img class="complement-img" src="./res/images/one_complement_problem_addition_over_zero.png" alt="">
-            <span class="content-heading-sec">Wertebereich</span>
-            <p>
-                von: -2<sup>n-1</sup> + 1 <br>
-                bis: 2<sup>n-1</sup> -1
-            </p>
-        </div>
-        <div class="content" id="twocomplement">
-            <span class="content-heading">Zweierkomplement</span>
-            <p>
-                Eine weitere Darstellung für negative Zahlen ist das Zweierkomplement. Mit dem Zweierkomplement <br>
-                werden die zwei Probleme des Einerkomplements gelöst. Aus diesem Grund wird standartmäßig das Zweierkomplement verwendet. <br>
-                Das Zweierkomplement bildet man, indem man zuerst das Einerkomplement bildet und dann eine binäre 1 addiert. 
-            </p>
-            <span class="content-heading-thi">Beispiele</span>
-            <span>-5 &rarr; |-5| = 5 = 0101<sub>2</sub> &rarr; 1010<sub>2</sub> (Einerkomplement) &rarr; 1010<sub>2</sub> + 0001<sub>2</sub> = 1011</span>
-            <span>-3 &rarr; |-3| = 3 = 0011<sub>2</sub> &rarr; 1100<sub>2</sub> (Einerkomplement) &rarr; 1100<sub>2</sub> + 0001<sub>2</sub> = 1101</span>
-            <span>Beispiel, dass die Addition über 0 nun funktioniert:</span> 
-            <img class="complement-img" src="./res/images/two_complement_solution_addition_over_zero.png" alt="">
-            <span class="content-heading-sec">Wertebereich</span>
-            <p>
-                von: -2<sup>n-1</sup> <br>
-                bis: 2<sup>n-1</sup> -1
-            </p>
+            <div class="content" id="twocomplement">
+                <span class="content-heading">Zweierkomplement</span>
+                <p>
+                    Eine weitere Darstellung für negative Zahlen ist das Zweierkomplement. Mit dem Zweierkomplement <br>
+                    werden die zwei Probleme des Einerkomplements gelöst. Aus diesem Grund wird standartmäßig das Zweierkomplement verwendet. <br>
+                    Das Zweierkomplement bildet man, indem man zuerst das Einerkomplement bildet und dann eine binäre 1 addiert. 
+                </p>
+                <span class="content-heading-thi">Beispiele</span>
+                <span>-5 &rarr; |-5| = 5 = 0101<sub>2</sub> &rarr; 1010<sub>2</sub> (Einerkomplement) &rarr; 1010<sub>2</sub> + 0001<sub>2</sub> = 1011</span>
+                <span>-3 &rarr; |-3| = 3 = 0011<sub>2</sub> &rarr; 1100<sub>2</sub> (Einerkomplement) &rarr; 1100<sub>2</sub> + 0001<sub>2</sub> = 1101</span>
+                <span>Beispiel, dass die Addition über 0 nun funktioniert:</span> 
+                <img class="complement-img" src="./res/images/two_complement_solution_addition_over_zero.png" alt="">
+                <span class="content-heading-sec">Wertebereich</span>
+                <p>
+                    von: -2<sup>n-1</sup> <br>
+                    bis: 2<sup>n-1</sup> -1
+                </p>
+            </div>
         </div>
     </div>
     <error>

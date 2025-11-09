@@ -70,11 +70,18 @@ nav > span {
 
 /* general */
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
     gap: 3em;
-    padding: 1em 5em;
+    padding: 1em 3em;
+    width: min-content;
     color: var(--color);
     background-color: var(--bg-main-color);
 }
@@ -294,7 +301,7 @@ tr:nth-child(even):not(.no-default-row-highlighting) {
 
 /* only desktop */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .content-container, nav {
         display: none;
     }
