@@ -45,19 +45,17 @@
                 <input class="output" disabled id="binary-converter-decimal"></input>
             </div>
             <div class="binary-button-container">
-                <button class="binary-button" id="button-0" onclick="binaryButtonToggle(0)">0</button>
-                <button class="binary-button" id="button-1" onclick="binaryButtonToggle(1)">0</button>
-                <button class="binary-button" id="button-2" onclick="binaryButtonToggle(2)">0</button>
-                <button class="binary-button" id="button-3" onclick="binaryButtonToggle(3)">0</button>
-                <button class="binary-button" id="button-4" onclick="binaryButtonToggle(4)">0</button>
-                <button class="binary-button" id="button-5" onclick="binaryButtonToggle(5)">0</button>
-                <button class="binary-button" id="button-6" onclick="binaryButtonToggle(6)">0</button>
-                <button class="binary-button" id="button-7" onclick="binaryButtonToggle(7)">0</button>
+                <button class="binary-button" id="bin-button-0" onclick="binaryButtonToggle(0)">0</button>
+                <button class="binary-button" id="bin-button-1" onclick="binaryButtonToggle(1)">0</button>
+                <button class="binary-button" id="bin-button-2" onclick="binaryButtonToggle(2)">0</button>
+                <button class="binary-button" id="bin-button-3" onclick="binaryButtonToggle(3)">0</button>
+                <button class="binary-button" id="bin-button-4" onclick="binaryButtonToggle(4)">0</button>
+                <button class="binary-button" id="bin-button-5" onclick="binaryButtonToggle(5)">0</button>
+                <button class="binary-button" id="bin-button-6" onclick="binaryButtonToggle(6)">0</button>
+                <button class="binary-button" id="bin-button-7" onclick="binaryButtonToggle(7)">0</button>
             </div>
 
-            <span class="binary-result" id="binary-result">
-                
-            </span>
+            <span class="binary-result" id="binary-result"></span>
             
         </div>
         <div class="content" id="hexadecimalsystem">
@@ -90,6 +88,18 @@
                 </div>
                 <input class="output" disabled id="hex-converter-decimal"></input>
             </div>
+
+             <div class="hex-button-container">
+                <button class="hex-button" id="hex-button-0" onclick="hexButtonToggle(0, event)">0</button>
+                <button class="hex-button" id="hex-button-1" onclick="hexButtonToggle(1, event)">0</button>
+                <button class="hex-button" id="hex-button-2" onclick="hexButtonToggle(2, event)">0</button>
+                <button class="hex-button" id="hex-button-3" onclick="hexButtonToggle(3, event)">0</button>
+                <button class="hex-button" id="hex-button-4" onclick="hexButtonToggle(4, event)">0</button>
+                <button class="hex-button" id="hex-button-5" onclick="hexButtonToggle(5, event)">0</button>
+                <button class="hex-button" id="hex-button-6" onclick="hexButtonToggle(6, event)">0</button>
+                <button class="hex-button" id="hex-button-7" onclick="hexButtonToggle(7, event)">0</button>
+            </div>
+            <span class="hex-result" id="hex-result"></span>
             <span class="content-heading-sec">Zusammenhang zwischen Binär- und Hexadezimalsystem</span>
             <p>
                 Um einen Zusammenhang zum Binärsystem herzustellen, müssen zunächst die Bitmuster der einzelnen Hexadezimalzahlen im Binärsystem betrachtet werden:

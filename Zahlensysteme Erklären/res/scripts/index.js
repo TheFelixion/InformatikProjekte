@@ -100,15 +100,44 @@ function binaryButtonToggle(index) {
 }
 
 function calcBinaryResult() {
-    const button0 = document.getElementById('button-0');
-    const button1 = document.getElementById('button-1');
-    const button2 = document.getElementById('button-2');
-    const button3 = document.getElementById('button-3');
-    const button4 = document.getElementById('button-4');
-    const button5 = document.getElementById('button-5');
-    const button6 = document.getElementById('button-6');
-    const button7 = document.getElementById('button-7');
+    const button0 = document.getElementById('bin-button-0');
+    const button1 = document.getElementById('bin-button-1');
+    const button2 = document.getElementById('bin-button-2');
+    const button3 = document.getElementById('bin-button-3');
+    const button4 = document.getElementById('bin-button-4');
+    const button5 = document.getElementById('bin-button-5');
+    const button6 = document.getElementById('bin-button-6');
+    const button7 = document.getElementById('bin-button-7');
 
     const result = `${button0.textContent}${button1.textContent}${button2.textContent}${button3.textContent}${button4.textContent}${button5.textContent}${button6.textContent}${button7.textContent}`;
     document.getElementById('binary-result').textContent = parseInt(result, 2).toString(10);
+}
+
+function hexButtonToggle(index, event) {
+    const button = document.getElementById(`hex-button-${index}`);
+
+    const currentValue = parseInt(button.textContent, 16);
+    let newValue;
+    if(event.shiftKey) {
+        newValue = (currentValue - 1 + 16) % 16;
+    } else {
+        newValue = (currentValue + 1) % 16;
+    }
+    button.textContent = newValue.toString(16).toUpperCase().padStart(1, '0');
+
+    calcHexResult();
+}
+
+function calcHexResult() {
+    const button0 = document.getElementById('hex-button-0');
+    const button1 = document.getElementById('hex-button-1');
+    const button2 = document.getElementById('hex-button-2');
+    const button3 = document.getElementById('hex-button-3');
+    const button4 = document.getElementById('hex-button-4');
+    const button5 = document.getElementById('hex-button-5');
+    const button6 = document.getElementById('hex-button-6');
+    const button7 = document.getElementById('hex-button-7');
+
+    const result = `${button0.textContent}${button1.textContent}${button2.textContent}${button3.textContent}${button4.textContent}${button5.textContent}${button6.textContent}${button7.textContent}`;
+    document.getElementById('hex-result').textContent = parseInt(result, 16).toString(10);
 }
