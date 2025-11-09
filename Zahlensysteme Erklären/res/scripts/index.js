@@ -89,3 +89,26 @@ function hexConverterConvert() {
         inputhex.value = decimalToHex(inputdecimal.value);
     }
 }
+
+function binaryButtonToggle(index) {
+    const button = document.getElementById(`button-${index}`);
+
+    const currentValue = button.textContent === '0' ? '1' : '0';
+    button.textContent = currentValue;
+
+    calcBinaryResult();
+}
+
+function calcBinaryResult() {
+    const button0 = document.getElementById('button-0');
+    const button1 = document.getElementById('button-1');
+    const button2 = document.getElementById('button-2');
+    const button3 = document.getElementById('button-3');
+    const button4 = document.getElementById('button-4');
+    const button5 = document.getElementById('button-5');
+    const button6 = document.getElementById('button-6');
+    const button7 = document.getElementById('button-7');
+
+    const result = `${button0.textContent}${button1.textContent}${button2.textContent}${button3.textContent}${button4.textContent}${button5.textContent}${button6.textContent}${button7.textContent}`;
+    document.getElementById('binary-result').textContent = parseInt(result, 2).toString(10);
+}

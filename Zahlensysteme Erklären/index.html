@@ -44,6 +44,21 @@
                 </div>
                 <input class="output" disabled id="binary-converter-decimal"></input>
             </div>
+            <div class="binary-button-container">
+                <button class="binary-button" id="button-0" onclick="binaryButtonToggle(0)">0</button>
+                <button class="binary-button" id="button-1" onclick="binaryButtonToggle(1)">0</button>
+                <button class="binary-button" id="button-2" onclick="binaryButtonToggle(2)">0</button>
+                <button class="binary-button" id="button-3" onclick="binaryButtonToggle(3)">0</button>
+                <button class="binary-button" id="button-4" onclick="binaryButtonToggle(4)">0</button>
+                <button class="binary-button" id="button-5" onclick="binaryButtonToggle(5)">0</button>
+                <button class="binary-button" id="button-6" onclick="binaryButtonToggle(6)">0</button>
+                <button class="binary-button" id="button-7" onclick="binaryButtonToggle(7)">0</button>
+            </div>
+
+            <span class="binary-result" id="binary-result">
+                
+            </span>
+            
         </div>
         <div class="content" id="hexadecimalsystem">
             <span class="content-heading">Hexadezimalsystem</span>
@@ -273,5 +288,7 @@
         Bitte schauen Sie sich diese Website an einem Desktop Endgerät an!
     </error>
     <script src="./res/scripts/colortester.js"></script>
+    <script>calcBinaryResult();</script>
 </body>
+
 </html>
