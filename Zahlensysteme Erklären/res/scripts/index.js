@@ -22,7 +22,7 @@ function decimalToHex(decimalNumber) {
     if (isNaN(decimalNumber) || decimalNumber < 0) {
         return 'ungültige Eingabe';
     }
-    return decimalNumber.toString(16).toUpperCase();
+    return Number(decimalNumber).toString(16).toUpperCase();
 }
 
 function hexToDecimal(hexNumber) {

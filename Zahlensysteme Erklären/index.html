@@ -20,7 +20,8 @@
             <p>
                 Das Binärsystem, auch Dualsystem genannt, ist ein Stellenwertsystem zur Basiszahl 2. <br>
                 Es werden nur die Ziffern 0 und 1 genutzt. Die Ziffern werden von rechts nach links mit der 0 beginnend durchnummeriert. <br>
-                Der Wert der Ziffer im Dezimalsystem ergibt sich aus dem Produkt der Ziffer mit der Potenz der Basiszahl 2 und der Nummer der Ziffer als Hochzahl: 
+                Der Wert der Ziffer im Dezimalsystem ergibt sich aus dem Produkt der Ziffer mit der Potenz der Basiszahl 2 <br>
+                und der Nummer der Ziffer als Hochzahl: 
             </p>
             <span class="content-heading-thi">Beispiel</span>
             <span>Binärzahl: 11010011</span>
@@ -114,7 +115,8 @@
             <span class="hex-result" id="hex-result">0</span>
             <span class="content-heading-sec">Zusammenhang zwischen Binär- und Hexadezimalsystem</span>
             <p>
-                Um einen Zusammenhang zum Binärsystem herzustellen, müssen zunächst die Bitmuster der einzelnen Hexadezimalzahlen im Binärsystem betrachtet werden:
+                Um einen Zusammenhang zum Binärsystem herzustellen, müssen zunächst die Bitmuster <br>
+                der einzelnen Hexadezimalzahlen im Binärsystem betrachtet werden:
             </p>
             <table>
                 <tr class="no-default-row-highlighting">
@@ -189,9 +191,9 @@
                 die letzten vier Bits der letzten Hexadezimalzahl. <br>
                 01011101<sub>2</sub><br>
                 = 0 &sdot; 128 + 1 &sdot; 64 + 0 &sdot; 32 + 1 &sdot; 16 + 1 &sdot; 8 + 1 &sdot; 4 + 2 &sdot; 0 + 1 &sdot; 1 <br>
-                = (0 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 16 + (1 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 16 <br>
-                = 5 &sdot; 16 + 13 &sdot; 16 <br>
-                = 5D<sub>16</sub>
+                = (0 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 16 + (1 &sdot; 8 + 1 &sdot; 4 + 0 &sdot; 2 + 1 &sdot; 1) &sdot; 1 <br>
+                = 5 &sdot; 16 + 13 &sdot; 1 <br>
+                = 5D<sub>16</sub> <br>
                 Man kann also immer vier Bits einer Binärzahl durch eine Hexadezimalzahl ersetzen, <br>
                 um Binärzahlen, gekürzt als Hexadezimalzahlen, darstellen zu können.
             </p>
@@ -199,7 +201,8 @@
             <p>
                 Das Bildschirme Farben mit Rot, Grün und Blau darstellen, sollte ja bekannt sein. <br>
                 Meist werden hierfür 8 Bit, also 1 Byte pro Farbe benutzt. Das heißt, dass man z.B. <br>
-                der Farbe Rot einen beliebigen Wert zwischen 0 und 255 zuweisen kann oder eben eine beliebige Hexadezimalzahl zwischen 00 und FF. <br>
+                der Farbe Rot einen beliebigen Wert zwischen 0 und 255 zuweisen kann oder eben eine <br>
+                beliebige Hexadezimalzahl zwischen 00 und FF. <br>
                 Dies kann man z.B. in der RGB-Farbdarstellung darstellen: rgb(255,0,0) für Rot. <br>
                 Daraus folgt der bekannte Hex-Farbcode zur Farbdarstellung. <br>
                 Sie beginnt mit einem Hashtag(#), gefolgt von zwei Hexadezimalen für Rot, zwei für Grün und zwei für Blau. 
@@ -264,12 +267,12 @@
         <div class="content" id="onecomplement">
             <span class="content-heading">Einerkomplement</span>
             <p>
-                Bisher können nur positive Zahlen mit dem Binärsystem dargestellt werden, um nun auch negative Zahlen darstellen zu können, gibt es das Einerkomplement. <br>
-                Das erste Bit stellt nun keinen Teil der Zahl mehr dar, sondern ist ein Indikator dafür, ob die Zahl positiv oder negativ ist. <br>
-                Hierbei steht eine 0 für positiv und eine 1 für negativ. <br>
+                Bisher können nur positive Zahlen mit dem Binärsystem dargestellt werden, um nun auch negative Zahlen <br>
+                darstellen zu können, gibt es das Einerkomplement. Das erste Bit stellt nun keinen Teil der Zahl mehr dar, <br>
+                sondern ist ein Indikator dafür, ob die Zahl positiv oder negativ ist. <br> Hierbei steht eine 0 für positiv und eine 1 für negativ. <br>
                 Um eine negative Zahl im Einerkomplement darzustellen, wird zuerst der Betrag der Zahl als Binärzahl dargestellt. <br>
                 Bei dieser Binärzahl werden nun alle einzelnen Bits invertiert, das heißt aus jeder 0 wird eine 1 und umgekehrt. <br>
-                Das invertieren sorgt dafür, dass Addition, sowie Subtraktion weiterhin funktionieren. <br>
+                Das Invertieren sorgt dafür, dass Addition, sowie Subtraktion weiterhin funktionieren. <br>
             </p>
             <span class="content-heading-thi">Beispiele</span>
             <span>-5 &rarr; |-5| = 5 = 0101<sub>2</sub> &rarr; 1010<sub>2</sub></span>
@@ -290,8 +293,8 @@
         <div class="content" id="twocomplement">
             <span class="content-heading">Zweierkomplement</span>
             <p>
-                Eine weitere Darstellung für negative Zahlen ist das Zweierkomplement. Mit dem Zweierkomplement werden die zwei Probleme des Einerkomplements gelöst. <br>
-                Deshalb ist das Zweierkomplement Standard. <br>
+                Eine weitere Darstellung für negative Zahlen ist das Zweierkomplement. Mit dem Zweierkomplement <br>
+                werden die zwei Probleme des Einerkomplements gelöst. Aus diesem Grund wird standartmäßig das Zweierkomplement verwendet. <br>
                 Das Zweierkomplement bildet man, indem man zuerst das Einerkomplement bildet und dann eine binäre 1 addiert. 
             </p>
             <span class="content-heading-thi">Beispiele</span>
@@ -307,10 +310,9 @@
         </div>
     </div>
     <error>
-        Bitte schauen Sie sich diese Website an einem Desktop Endgerät an!
+        Bitte auf PC öffnen
     </error>
     <script src="./res/scripts/colortester.js"></script>
-    <script>calcBinaryResult();</script>
 </body>
 
 </html>
