@@ -91,7 +91,7 @@ function hexConverterConvert() {
 }
 
 function binaryButtonToggle(index) {
-    const button = document.getElementById(`button-${index}`);
+    const button = document.getElementById(`bin-button-${index}`);
 
     const currentValue = button.textContent === '0' ? '1' : '0';
     button.textContent = currentValue;
