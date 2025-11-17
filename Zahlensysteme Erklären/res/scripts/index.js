@@ -129,14 +129,14 @@ function hexButtonToggle(index, event) {
 }
 
 function calcHexResult() {
-    const button0 = document.getElementById('hex-button-0');
-    const button1 = document.getElementById('hex-button-1');
-    const button2 = document.getElementById('hex-button-2');
-    const button3 = document.getElementById('hex-button-3');
-    const button4 = document.getElementById('hex-button-4');
-    const button5 = document.getElementById('hex-button-5');
-    const button6 = document.getElementById('hex-button-6');
-    const button7 = document.getElementById('hex-button-7');
+    const button7 = document.getElementById('hex-button-0');
+    const button6 = document.getElementById('hex-button-1');
+    const button5 = document.getElementById('hex-button-2');
+    const button4 = document.getElementById('hex-button-3');
+    const button3 = document.getElementById('hex-button-4');
+    const button2 = document.getElementById('hex-button-5');
+    const button1 = document.getElementById('hex-button-6');
+    const button0 = document.getElementById('hex-button-7');
 
     const result = `${button0.textContent}${button1.textContent}${button2.textContent}${button3.textContent}${button4.textContent}${button5.textContent}${button6.textContent}${button7.textContent}`;
     document.getElementById('hex-result').textContent = parseInt(result, 16).toString(10);
